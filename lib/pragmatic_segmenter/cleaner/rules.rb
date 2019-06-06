@@ -72,7 +72,8 @@ module PragmaticSegmenter
         # Rubular: http://rubular.com/r/XZVqMPJhea
         EscapedHTMLTagRule = Rule.new(/&lt;\/?[^gt;]*gt;/, '')
 
-        All = [HTMLTagRule, EscapedHTMLTagRule]
+        # Since we need tags to be included, we're overriding this
+        All = [] # [HTMLTagRule, EscapedHTMLTagRule]
       end
 
       module PDF
